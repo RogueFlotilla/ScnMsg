@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Analysis Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+        }
+        h2 {
+            margin: 0;
+        }
+        h6 {
+            margin: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .email-details, .analysis-results {
+            margin-bottom: 30px;
+        }
+        .section-title {
+            font-size: 1.4em;
+            color: #333;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .section-subtitle {
+            font-size: 1.2em;
+            color: #333;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 2px;
+            margin-bottom: 10px;
+        }
+        .info {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .result {
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .negative {
+            background-color: #e0f7e0;
+            border: 1px solid #2e7d32;
+        }
+        .neutral {
+            background-color: #fff9c4;
+            border: 1px solid #fbc02d;
+        }
+        .positive {
+            background-color: #ffebee;
+            border: 1px solid #d32f2f;
+        }
+        .informational {
+            background-color: #81d4fa;
+            border: 1px solid #10069f;
+        }
+        .unknown {
+            background-color: #ffe0b2;
+            border: 1px solid #f15623;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1><b>ScanMsg</b></h1>
+    <h2>Email Analysis Report</h2>
+    <p>Loaded on: <span id="date"></span></p>
+</header>
+
+<div class="container">
+    <!-- Email Details Section -->
+    <section class="email-details">
+        <div class="section-title">Email Details</div>
+        <div class="info">
+            <strong>Sender:</strong> <span id="email-sender">example@domain.com</span><br>
+            <strong>Subject:</strong> <span id="email-subject">Suspicious Email Subject</span><br>
+            <strong>Received Date:</strong> <span id="email-date">April 5, 2025</span><br>
+        </div>
+    </section>
+
+    <!-- Analysis Results Section -->
+    <section class="analysis-results">
+        <div class="section-title">Analysis Results</div>
+
+        <!-- VirusTotal Analysis -->
+        <div class="result negative">
+            <strong>VirusTotal Scan:</strong> <span id="virustotal-status">Clean</span><br>
+            <strong>VirusTotal URL:</strong> <a href="https://www.virustotal.com" target="_blank">View Report</a>
+        </div>
+
+        <!-- Spam Score -->
+        <div class="result positive">
+          <strong>Spam Score:</strong> <span id="spam-score">High (8/10)</span><br>
+            <strong>Recommended Action:</strong> Avoid interacting with the email.
+            <h6>This score was generated using AI assessment of the email contents.</h6>
+        </div>
+
+        <!-- Phishing Detection -->
+        <div class="result negative">
+            <strong>Phishing Detection:</strong> <span id="phishing-status">No Phishing Detected</span><br>
+            <strong>Tool Used:</strong> <span id="phishing-tool">PhishTank</span>
+            <h6>This score was generated using AI assessment of the email contents.</h6>
+        </div>
+
+        <!-- Attachment Details-->
+        <div class="section-subtitle">Attachments</div>
+            <div class="result neutral">
+              <strong>Filename:</strong> <span id="attachment-name">Filename.txt</span><br> 
+              <strong>Analysis:</strong> <span id="attachment-status">Suspicious Attachment Detected</span><br>
+                <strong>File Type:</strong> <span id="attachment-type">Executable (.exe)</span><br>
+                <strong>VirusTotal Scan:</strong> <span id="virustotal-status">Clean</span><br>
+                <strong>VirusTotal URL:</strong> <a href="https://www.virustotal.com" target="_blank">View Report</a>
+            </div>
+
+        <!-- Link Details -->
+        <div class="section-subtitle">Links</div>
+        <div class="result unknown">
+          <strong>Link Analysis:</strong> <span id="attachment-status">Links Unable to be Decoded</span><br>
+          <strong>Link Type:</strong> <span id="attachment-type">Short (unable to expand)</span>
+        </div>
+
+        <!-- Recipient Details -->
+        <div class="section-subtitle">Recipients</div>
+        <div class="result informational">
+          <strong>Recipient Analysis:</strong> <span id="attachment-status">Additional Recipients Detected</span><br>
+          <strong>Recipient Type:</strong> <span id="attachment-type">Two CC'd</span>
+        </div>
+
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2025 Richard "RogueFlotilla" Flores - This software is released under the MIT License. See LICENSE for details.</p>
+</footer>
+
+<script>
+    // Adding dynamic date to the report
+    document.getElementById('date').textContent = new Date().toLocaleString();
+</script>
+
+</body>
+</html>
