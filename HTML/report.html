@@ -54,6 +54,7 @@
         }
         .info {
             background-color: #f9f9f9;
+            border: 1px solid #e0e0e0;
             padding: 15px;
             border-radius: 5px;
             margin-bottom: 10px;
@@ -80,8 +81,8 @@
             border: 1px solid #10069f;
         }
         .unknown {
-            background-color: #ffe0b2;
-            border: 1px solid #f15623;
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
         }
         footer {
             text-align: center;
@@ -93,9 +94,9 @@
 <body>
 
 <header>
-    <h1><b>ScanMsg</b></h1>
+    <h1><b>ScnMsg</b></h1>
     <h2>Email Analysis Report</h2>
-    <p>Loaded on: <span id="date"></span></p>
+    <p>Generated on: <span id="date"></span></p>
 </header>
 
 <div class="container">
@@ -103,9 +104,9 @@
     <section class="email-details">
         <div class="section-title">Email Details</div>
         <div class="info">
-            <strong>Sender:</strong> <span id="email-sender">example@domain.com</span><br>
-            <strong>Subject:</strong> <span id="email-subject">Suspicious Email Subject</span><br>
-            <strong>Received Date:</strong> <span id="email-date">April 5, 2025</span><br>
+            <strong>Sender:</strong> <span id="email-sender">{{ sender }}</span><br>
+            <strong>Subject:</strong> <span id="email-subject">{{ subject }}</span><br>
+            <strong>Received Date:</strong> <span id="email-date">{{ received_date }}</span><br>
         </div>
     </section>
 
@@ -113,50 +114,29 @@
     <section class="analysis-results">
         <div class="section-title">Analysis Results</div>
 
-        <!-- VirusTotal Analysis -->
-        <div class="result negative">
-            <strong>VirusTotal Scan:</strong> <span id="virustotal-status">Clean</span><br>
-            <strong>VirusTotal URL:</strong> <a href="https://www.virustotal.com" target="_blank">View Report</a>
-        </div>
-
-        <!-- Spam Score -->
-        <div class="result positive">
-          <strong>Spam Score:</strong> <span id="spam-score">High (8/10)</span><br>
-            <strong>Recommended Action:</strong> Avoid interacting with the email.
-            <h6>This score was generated using AI assessment of the email contents.</h6>
-        </div>
-
-        <!-- Phishing Detection -->
-        <div class="result negative">
-            <strong>Phishing Detection:</strong> <span id="phishing-status">No Phishing Detected</span><br>
-            <strong>Tool Used:</strong> <span id="phishing-tool">PhishTank</span>
+        <!-- Contents Score -->
+        <div class="result {{ category_color }}">
+          <strong>Message Contents Score:</strong> <span id="contents-score">{{ category }}</span><br>
+          <strong>Recommended Action:</strong> {{ category_recommendation }}<br>
+          <strong>Score Reasoning:</strong> {{ category_reasoning }}
             <h6>This score was generated using AI assessment of the email contents.</h6>
         </div>
 
         <!-- Attachment Details-->
         <div class="section-subtitle">Attachments</div>
-            <div class="result neutral">
-              <strong>Filename:</strong> <span id="attachment-name">Filename.txt</span><br> 
-              <strong>Analysis:</strong> <span id="attachment-status">Suspicious Attachment Detected</span><br>
-                <strong>File Type:</strong> <span id="attachment-type">Executable (.exe)</span><br>
-                <strong>VirusTotal Scan:</strong> <span id="virustotal-status">Clean</span><br>
-                <strong>VirusTotal URL:</strong> <a href="https://www.virustotal.com" target="_blank">View Report</a>
+        {% for attachment in attachments %}
+            <div class="result {{ attachment.result_color }}">
+              <strong>Filename:</strong> <span id="attachment-name">{{ attachment.filename }}</span><br> 
+              <strong>Analysis:</strong> <span id="attachment-status">{{ attachment.result }}</span><br>
+                <strong>File Type:</strong>
+                <span id="attachment-type">{{ attachment.filetype }}</span><br>
+                {% if attachment.sha256hash != '' %}
+                <strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/{{ attachment.sha256hash }}" target="_blank">View Report</a>
+                {% else %}
+                <strong>VirusTotal:</strong>
+                {% endif %}
             </div>
-
-        <!-- Link Details -->
-        <div class="section-subtitle">Links</div>
-        <div class="result unknown">
-          <strong>Link Analysis:</strong> <span id="attachment-status">Links Unable to be Decoded</span><br>
-          <strong>Link Type:</strong> <span id="attachment-type">Short (unable to expand)</span>
-        </div>
-
-        <!-- Recipient Details -->
-        <div class="section-subtitle">Recipients</div>
-        <div class="result informational">
-          <strong>Recipient Analysis:</strong> <span id="attachment-status">Additional Recipients Detected</span><br>
-          <strong>Recipient Type:</strong> <span id="attachment-type">Two CC'd</span>
-        </div>
-
+        {% endfor %}
     </section>
 </div>
 
