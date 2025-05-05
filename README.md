@@ -18,10 +18,9 @@ Use this command to install these packages before attempting to run the code:<br
 `pip install beautifulsoup4 imap-tools Jinja2 PyQt5 requests virustotal-python`
 
 To run the application GUI, run either of these commands from the root folder (ScnMsg) of the code:<br>
-*Note: command syntax may vary by OS or other settings*<br>
-Windows:  `python .\Python\email_client.py`<br>
-Linux:   `python3 .\Python\email_client.py`<br>
-MacOS has not been tested for this project.
+- Windows:  `python .\Python\email_client.py`<br>
+- Linux: `python3 .\Python\email_client.py`<br>
+*Notes:  Command syntax may vary by OS or other settings. MacOS has not been tested for this project.*
 
 ### Table of Libraries Used
 | Module or Package | Component(s) | Usage |
