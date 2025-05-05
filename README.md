@@ -9,28 +9,22 @@ Coming soon to a README near you.
 | Library | Package(s) | Use Case | Link |
 | ------- | ---------- | -------- | ---- |
 | bs4 | BeautifulSoup | Used to convert an HTML only email to text due to Groq API token restrictions. | https://pypi.org/project/beautifulsoup4/ |
-import hashlib
-from io import BytesIO
-import json
-import os
-import requests
-import time
-import vt
-import sys
-import os
-import webbrowser
-from PyQt5.QtWidgets import (
-    QApplication, QMainWindow, QWidget, QVBoxLayout, QTableView, QPushButton, QMessageBox, QAction, 
-    QDialog, QLineEdit, QFormLayout, QTextEdit, QHBoxLayout
-)
-from PyQt5.QtGui import QStandardItemModel, QStandardItem, QIcon
-import get_mail
-from operator import itemgetter
-from imap_tools import MailBox
-import os
-import pickle
-import configparser
-import jinja2
+| configparser | | USE CASE | LINK |
+| hashlib | | USE CASE | LINK |
+| imap_tools | MailBox | USE CASE | LINK |
+| io | BytesIO | USE CASE | LINK |
+| jinja2 | | USE CASE | LINK |
+| json | | USE CASE | LINK |
+| operator | itemgetter | USE CASE | LINK |
+| os | | USE CASE | LINK |
+| pickle | | USE CASE | LINK |
+| PyQt5.QtGui | QStandardItemModel<br>QStandardItem<br>QIcon | USE CASE | LINK |
+| PyQt5.QtWidgets | QApplication<br>QMainWindow<br>QWidget<br>QVBoxLayout<br>QTableView<br>QPushButton<br>QMessageBox<br>QAction<br>QDialog<br>QLineEdit<br>QFormLayout<br>QTextEdit<br>QHBoxLayout | USE CASE | LINK |
+| requests | | USE CASE | LINK |
+| sys | | USE CASE | LINK |
+| time | | USE CASE | LINK |
+| vt | | USE CASE | LINK |
+| webbrowser | | USE CASE | LINK |
 
 ## Screenshots and Code Explanation
 Coming soon to a README near you.
