@@ -1,9 +1,14 @@
-![PNG Image of the Scan Message icon](./icons/ScnMsgIconTransparent.png)
+![PNG Image of the Scan Message icon](./icons/ScnMsgIconTransparentWide.png)
 ## Introduction
 The ScnMsg email client is a simple email client created using Python and some HTML with the goal to detect, reduce, and hopefully prevent malware execution, scams, and phishing attempts on the technology illiterate, cyber-unaware, and especially the elderly population that can be easily manipulated. The goal is to integrate features that will check emails against existing tools, such as Virus Total, and use AI to assess contents to provide a scoring mechanism to alert a user to potential risks through use of Groq API calls. Complex features seen in other email clients such as automatic replies, folder sorting, and advanced filtering rules will intentionally be left out since the target users for this software would likely not be the group to leverage those features and may make its use more complicated for the anticipated user.
 
 ## Explanation and Details
 Coming soon to a README near you.
+
+The ScnMsg icon was created using ChatGPT, with the prompt:
+> Can you make an icon for an application I'm building called ScnMsg?
+
+This proposal is to make a simple email client using Python to detect, reduce, and hopefully prevent malware execution, scams, and phishing attempts on the technology illiterate, cyber-unaware, and especially the elderly population that can be easily manipulated. The goal is to integrate features that will check emails against existing tools and use AI to assess contents to provide a scoring mechanism to alert a user to potential risks.
 
 ## Setup and Libraries
 The following modules are not standard Python3 libraries and must be installed manually before use:
