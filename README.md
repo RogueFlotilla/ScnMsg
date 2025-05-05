@@ -14,7 +14,7 @@ The following modules are not standard Python3 libraries and must be installed m
 - requests
 - vt (Virus Total)
 
-Use this command to install these packages before attempting to run the code:
+Use this command to install these packages before attempting to run the code:<br>
 `pip install beautifulsoup4 imap-tools Jinja2 PyQt5 requests virustotal-python`
 
 ### Table of Libraries Used
@@ -30,8 +30,7 @@ Use this command to install these packages before attempting to run the code:
 | [operator](https://docs.python.org/3/library/operator.html#module-operator) | itemgetter | USE CASE |
 | [os](https://docs.python.org/3/library/os.html#module-os) | - | USE CASE |
 | [pickle](https://docs.python.org/3/library/pickle.html#module-pickle) | - | USE CASE |
-| PyQt5.QtGui | QStandardItemModel<br>QStandardItem<br>QIcon | USE CASE |
-| PyQt5.QtWidgets | QApplication<br>QMainWindow<br>QWidget<br>QVBoxLayout<br>QTableView<br>QPushButton<br>QMessageBox<br>QAction<br>QDialog<br>QLineEdit<br>QFormLayout<br>QTextEdit<br>QHBoxLayout | USE CASE |
+| [PyQt5].QtGui(https://pypi.org/project/PyQt5/) | QtGui.StandardItemModel<br>QtGui.QStandardItem<br>QtGui.QIcon<br>QtWidgets.QApplication<br>QtWidgets.QMainWindow<br>QtWidgets.QWidget<br>QtWidgets.QVBoxLayout<br>QtWidgets.QTableView<br>QtWidgets.QPushButton<br>QtWidgets.QMessageBox<br>QtWidgets.QAction<br>QtWidgets.QDialog<br>QtWidgets.QLineEdit<br>QtWidgets.QFormLayout<br>QtWidgets.QTextEdit<br>QtWidgets.QHBoxLayout | Email Client GUI |
 | [requests](https://pypi.org/project/requests/) | - | USE CASE |
 | [sys](https://docs.python.org/3/library/sys.html#module-sys) | - | USE CASE |
 | [time](https://docs.python.org/3/library/time.html#module-time) | - | USE CASE |
