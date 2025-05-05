@@ -6,25 +6,28 @@ The ScnMsg email client is a simple email client created using Python and some H
 Coming soon to a README near you.
 
 ## Setup and Libraries
-| Library | Package(s) | Use Case | Link |
+The following modules are note default and must be installed manually before use:
+Command: 'pip install bs4 imamp tools jinja2 pyqt5 vt'
+
+| Module or Package | Component(s) | Usage |
 | ------- | ---------- | -------- | ---- |
-| bs4 | BeautifulSoup | Used to convert an HTML only email to text due to Groq API token restrictions. | https://pypi.org/project/beautifulsoup4/ |
-| configparser | | USE CASE | LINK |
-| hashlib | | USE CASE | LINK |
-| imap_tools | MailBox | USE CASE | LINK |
-| io | BytesIO | USE CASE | LINK |
-| jinja2 | | USE CASE | LINK |
-| json | | USE CASE | LINK |
-| operator | itemgetter | USE CASE | LINK |
-| os | | USE CASE | LINK |
-| pickle | | USE CASE | LINK |
-| PyQt5.QtGui | QStandardItemModel<br>QStandardItem<br>QIcon | USE CASE | LINK |
-| PyQt5.QtWidgets | QApplication<br>QMainWindow<br>QWidget<br>QVBoxLayout<br>QTableView<br>QPushButton<br>QMessageBox<br>QAction<br>QDialog<br>QLineEdit<br>QFormLayout<br>QTextEdit<br>QHBoxLayout | USE CASE | LINK |
-| requests | | USE CASE | LINK |
-| sys | | USE CASE | LINK |
-| time | | USE CASE | LINK |
-| vt | | USE CASE | LINK |
-| webbrowser | | USE CASE | LINK |
+| bs4 | BeautifulSoup | Used to convert an HTML only email to text due to Groq API token restrictions. |
+| [configparser](https://docs.python.org/3/library/configparser.html#module-configparser) | - | USE CASE |
+| [hashlib](https://docs.python.org/3/library/hashlib.html#module-hashlib) | - | USE CASE |
+| imap_tools | MailBox | USE CASE |
+| [io](https://docs.python.org/3/library/io.html#module-io) | BytesIO | USE CASE |
+| jinja2 | - | USE CASE |
+| [json](https://docs.python.org/3/library/json.html#module-json) | - | USE CASE |
+| [operator](https://docs.python.org/3/library/operator.html#module-operator) | itemgetter | USE CASE |
+| [os](https://docs.python.org/3/library/os.html#module-os) | - | USE CASE |
+| [pickle](https://docs.python.org/3/library/pickle.html#module-pickle) | - | USE CASE |
+| PyQt5.QtGui | QStandardItemModel<br>QStandardItem<br>QIcon | USE CASE |
+| PyQt5.QtWidgets | QApplication<br>QMainWindow<br>QWidget<br>QVBoxLayout<br>QTableView<br>QPushButton<br>QMessageBox<br>QAction<br>QDialog<br>QLineEdit<br>QFormLayout<br>QTextEdit<br>QHBoxLayout | USE CASE |
+| requests | - | USE CASE |
+| [sys](https://docs.python.org/3/library/sys.html#module-sys) | - | USE CASE |
+| [time](https://docs.python.org/3/library/time.html#module-time) | - | USE CASE |
+| vt | - | USE CASE |
+| [webbrowser](https://docs.python.org/3/library/webbrowser.html#module-webbrowser) | - | USE CASE |
 
 ## Screenshots and Code Explanation
 Coming soon to a README near you.
