@@ -124,12 +124,14 @@
 
         <!-- Attachment Details-->
         <div class="section-subtitle">Attachments</div>
+        <!--List each attachmen with its analysis results-->
         {% for attachment in attachments %}
             <div class="result {{ attachment.result_color }}">
               <strong>Filename:</strong> <span id="attachment-name">{{ attachment.filename }}</span><br> 
               <strong>Analysis:</strong> <span id="attachment-status">{{ attachment.result }}</span><br>
                 <strong>File Type:</strong>
                 <span id="attachment-type">{{ attachment.filetype }}</span><br>
+                <!--Link to Virus Total page, or blank if no attachments-->
                 {% if attachment.sha256hash != '' %}
                 <strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/{{ attachment.sha256hash }}" target="_blank">View Report</a>
                 {% else %}

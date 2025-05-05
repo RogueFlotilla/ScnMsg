@@ -4,7 +4,6 @@ from imap_tools import MailBox
 import os
 import pickle
 import configparser
-
 import analyze_mail
 
 def load_email_settings():

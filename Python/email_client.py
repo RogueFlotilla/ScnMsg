@@ -2,13 +2,10 @@ import sys
 import os
 import webbrowser
 from PyQt5.QtWidgets import (
-    QApplication, QMainWindow, QWidget, QVBoxLayout, QTableView,
-    QPushButton, QMessageBox, QAction, QDialog, QLineEdit,
-    QFormLayout, QTextEdit, QHBoxLayout
+    QApplication, QMainWindow, QWidget, QVBoxLayout, QTableView, QPushButton, QMessageBox, QAction, 
+    QDialog, QLineEdit, QFormLayout, QTextEdit, QHBoxLayout
 )
 from PyQt5.QtGui import QStandardItemModel, QStandardItem, QIcon
-
-# Import Separate Files
 import get_mail
 
 class SettingsDialog(QDialog):

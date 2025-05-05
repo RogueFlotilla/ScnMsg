@@ -1,13 +1,14 @@
 # Import Dependencies
+from bs4 import BeautifulSoup
+import hashlib
+from io import BytesIO
+import json
 import os
 import requests
-import json
-import vt
-import hashlib
 import time
-from io import BytesIO
-from operator import itemgetter
-from bs4 import BeautifulSoup
+import vt
+
+# Import my own Python Module
 import report
 
 global hash_scan_history
@@ -91,7 +92,10 @@ def check_email_for_spam(email_content):
     "messages": [
       {
         "role": "system",
-        "content": "You are an email spam and threat detection assistant. Analyze the content of the email provided, then only respond 'Normal', 'Spam', 'Phishing', 'Scam', 'Fraud', 'Threat'. Be pretty strict. We don't want spam. Then on the same line explain why you made this decision."
+        "content": "You are an email spam and threat detection assistant. Analyze the content of \
+          the email provided, then only respond 'Normal', 'Spam', 'Phishing', 'Scam', 'Fraud', \
+          'Threat'. Be pretty strict. We don't want spam. Then on the same line explain why you \
+          made this decision."
       },
       {
         "role": "user",
