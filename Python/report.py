@@ -1,6 +1,4 @@
 import jinja2
-# import os
-# import datetime
 
 def generate_report(email, category, category_reasoning, category_color, category_recommendation, attachment_results, filename):
   # Define data

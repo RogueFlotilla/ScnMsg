@@ -6,7 +6,31 @@ The ScnMsg email client is a simple email client created using Python and some H
 Coming soon to a README near you.
 
 ## Setup and Libraries
-Coming soon to a README near you.
+| Library | Package(s) | Use Case | Link |
+| ------- | ---------- | -------- | ---- |
+| bs4 | BeautifulSoup | Used to convert an HTML only email to text due to Groq API token restrictions. | https://pypi.org/project/beautifulsoup4/ |
+import hashlib
+from io import BytesIO
+import json
+import os
+import requests
+import time
+import vt
+import sys
+import os
+import webbrowser
+from PyQt5.QtWidgets import (
+    QApplication, QMainWindow, QWidget, QVBoxLayout, QTableView, QPushButton, QMessageBox, QAction, 
+    QDialog, QLineEdit, QFormLayout, QTextEdit, QHBoxLayout
+)
+from PyQt5.QtGui import QStandardItemModel, QStandardItem, QIcon
+import get_mail
+from operator import itemgetter
+from imap_tools import MailBox
+import os
+import pickle
+import configparser
+import jinja2
 
 ## Screenshots and Code Explanation
 Coming soon to a README near you.
@@ -23,4 +47,7 @@ This section displays tables containing screenshots of key secitons of code code
 | ![Screenshot of the HTML footer code and a date script](./readme_images/html_file_blocks.png)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | The footer of the report contains copyright and license details. There is also a script that contains code generating a date for the time the report was created to be used in the header. Both of these detail not only create a professional looking report, but provide important information to the reader. |
 
 ## Future Improvements
+The following areas for future improvement of expansion of this software have been identified
 - [ ] Implement sending of emails
+- [ ] Cleanup code (effciency / clarity)
+- [ ] Implement robust commenting for complex code

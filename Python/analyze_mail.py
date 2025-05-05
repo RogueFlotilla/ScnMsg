@@ -8,7 +8,7 @@ import requests
 import time
 import vt
 
-# Import my own Python Module
+# Import my own Python packages
 import report
 
 global hash_scan_history
