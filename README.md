@@ -21,21 +21,21 @@ Use this command to install these packages before attempting to run the code:<br
 | Module or Package | Component(s) | Usage |
 | ------- | ---------- | -------- |
 | [bs4](https://pypi.org/project/beautifulsoup4/) | BeautifulSoup | Used to convert an HTML only email to text due to Groq API token restrictions. |
-| [configparser](https://docs.python.org/3/library/configparser.html#module-configparser) | - | USE CASE |
-| [hashlib](https://docs.python.org/3/library/hashlib.html#module-hashlib) | - | USE CASE |
-| [imap_tools](https://pypi.org/project/imap-tools/) | MailBox | USE CASE |
-| [io](https://docs.python.org/3/library/io.html#module-io) | BytesIO | USE CASE |
+| [configparser](https://docs.python.org/3/library/configparser.html#module-configparser) | - | Use of Config file for storing email settings |
+| [hashlib](https://docs.python.org/3/library/hashlib.html#module-hashlib) | - | Hashing of files for faster VirusTotal lookup |
+| [imap_tools](https://pypi.org/project/imap-tools/) | MailBox | Recieve emails from an email provider using IMAP server |
+| [io](https://docs.python.org/3/library/io.html#module-io) | BytesIO | Convert attachments to bytes for VirusTotal scanning of files |
 | [jinja2](https://pypi.org/project/Jinja2/) | - | Template engine that builds HTML report files with passed variables |
-| [json](https://docs.python.org/3/library/json.html#module-json) | - | USE CASE |
-| [operator](https://docs.python.org/3/library/operator.html#module-operator) | itemgetter | USE CASE |
+| [json](https://docs.python.org/3/library/json.html#module-json) | - | Read returned Gorq data as JSON format |
+| [operator](https://docs.python.org/3/library/operator.html#module-operator) | itemgetter | Sort emails from newest to oldest, or vice versa |
 | [os](https://docs.python.org/3/library/os.html#module-os) | - | USE CASE |
-| [pickle](https://docs.python.org/3/library/pickle.html#module-pickle) | - | USE CASE |
+| [pickle](https://docs.python.org/3/library/pickle.html#module-pickle) | - | Save each email in its own pickle file to avoid filling RAM |
 | [PyQt5](https://pypi.org/project/PyQt5/) | QtGui.StandardItemModel<br>QtGui.QStandardItem<br>QtGui.QIcon<br>QtWidgets.QApplication<br>QtWidgets.QMainWindow<br>QtWidgets.QWidget<br>QtWidgets.QVBoxLayout<br>QtWidgets.QTableView<br>QtWidgets.QPushButton<br>QtWidgets.QMessageBox<br>QtWidgets.QAction<br>QtWidgets.QDialog<br>QtWidgets.QLineEdit<br>QtWidgets.QFormLayout<br>QtWidgets.QTextEdit<br>QtWidgets.QHBoxLayout | Email Client GUI |
-| [requests](https://pypi.org/project/requests/) | - | USE CASE |
-| [sys](https://docs.python.org/3/library/sys.html#module-sys) | - | USE CASE |
-| [time](https://docs.python.org/3/library/time.html#module-time) | - | USE CASE |
+| [requests](https://pypi.org/project/requests/) | - | Integration with Groq API via URL POST request |
+| [sys](https://docs.python.org/3/library/sys.html#module-sys) | - | Start and Exit the Application GUI |
+| [time](https://docs.python.org/3/library/time.html#module-time) | - | Pause between VirusTotal API calls when using Public API key |
 | [vt](https://github.com/doomedraven/VirusTotalApi) | - | Integration with VirusTotal API |
-| [webbrowser](https://docs.python.org/3/library/webbrowser.html#module-webbrowser) | - | USE CASE |
+| [webbrowser](https://docs.python.org/3/library/webbrowser.html#module-webbrowser) | - | Open the email reports in a webbrowser |
 
 ## Screenshots and Code Explanation
 This section displays tables containing screenshots of key secitons of code code with descriptions of the functionality being performed for each package (file) of the program.
