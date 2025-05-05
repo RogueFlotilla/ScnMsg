@@ -6,15 +6,18 @@ The ScnMsg email client is a simple email client created using Python and some H
 Coming soon to a README near you.
 
 ## Setup and Libraries
-The following modules are note default and must be installed manually before use:
+The following modules are not standard Python3 libraries and must be installed manually before use:
 - bs4 (BeautifulSoup)
 - imap_tools
 - jinja2
 - PyQt5
 - requests
 - vt (Virus Total)
-Command: `pip install beautifulsoup4 imap-tools Jinja2 PyQt5 requests virustotal-python`
 
+Use this command to install these packages before attempting to run the code:
+`pip install beautifulsoup4 imap-tools Jinja2 PyQt5 requests virustotal-python`
+
+### Table of Libraries Used
 | Module or Package | Component(s) | Usage |
 | ------- | ---------- | -------- |
 | [bs4](https://pypi.org/project/beautifulsoup4/) | BeautifulSoup | Used to convert an HTML only email to text due to Groq API token restrictions. |
