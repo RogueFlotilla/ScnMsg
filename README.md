@@ -10,7 +10,7 @@ The following modules are note default and must be installed manually before use
 Command: 'pip install bs4 imamp tools jinja2 pyqt5 vt'
 
 | Module or Package | Component(s) | Usage |
-| ------- | ---------- | -------- | ---- |
+| ------- | ---------- | -------- |
 | bs4 | BeautifulSoup | Used to convert an HTML only email to text due to Groq API token restrictions. |
 | [configparser](https://docs.python.org/3/library/configparser.html#module-configparser) | - | USE CASE |
 | [hashlib](https://docs.python.org/3/library/hashlib.html#module-hashlib) | - | USE CASE |
