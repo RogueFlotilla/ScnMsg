@@ -12,6 +12,8 @@ Coming soon to a README near you.
 Coming soon to a README near you.
 
 ## Screenshots and Code Explanation
+This section displays tables containing screenshots of key secitons of code code with descriptions of the functionality being performed for each package (file) of the program.
+
 ### HTML Report Template (./HTML/report.html)
 | Code Image *(click to enlarge)* | Description |
 |-------------------------------|-------------|
