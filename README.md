@@ -30,7 +30,7 @@ Use this command to install these packages before attempting to run the code:<br
 | [operator](https://docs.python.org/3/library/operator.html#module-operator) | itemgetter | USE CASE |
 | [os](https://docs.python.org/3/library/os.html#module-os) | - | USE CASE |
 | [pickle](https://docs.python.org/3/library/pickle.html#module-pickle) | - | USE CASE |
-| [PyQt5].QtGui(https://pypi.org/project/PyQt5/) | QtGui.StandardItemModel<br>QtGui.QStandardItem<br>QtGui.QIcon<br>QtWidgets.QApplication<br>QtWidgets.QMainWindow<br>QtWidgets.QWidget<br>QtWidgets.QVBoxLayout<br>QtWidgets.QTableView<br>QtWidgets.QPushButton<br>QtWidgets.QMessageBox<br>QtWidgets.QAction<br>QtWidgets.QDialog<br>QtWidgets.QLineEdit<br>QtWidgets.QFormLayout<br>QtWidgets.QTextEdit<br>QtWidgets.QHBoxLayout | Email Client GUI |
+| [PyQt5](https://pypi.org/project/PyQt5/) | QtGui.StandardItemModel<br>QtGui.QStandardItem<br>QtGui.QIcon<br>QtWidgets.QApplication<br>QtWidgets.QMainWindow<br>QtWidgets.QWidget<br>QtWidgets.QVBoxLayout<br>QtWidgets.QTableView<br>QtWidgets.QPushButton<br>QtWidgets.QMessageBox<br>QtWidgets.QAction<br>QtWidgets.QDialog<br>QtWidgets.QLineEdit<br>QtWidgets.QFormLayout<br>QtWidgets.QTextEdit<br>QtWidgets.QHBoxLayout | Email Client GUI |
 | [requests](https://pypi.org/project/requests/) | - | USE CASE |
 | [sys](https://docs.python.org/3/library/sys.html#module-sys) | - | USE CASE |
 | [time](https://docs.python.org/3/library/time.html#module-time) | - | USE CASE |
