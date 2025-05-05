@@ -17,7 +17,7 @@ The following modules are not standard Python3 libraries and must be installed m
 Use this command to install these packages before attempting to run the code:<br>
 `pip install beautifulsoup4 imap-tools Jinja2 PyQt5 requests virustotal-python`
 
-To run the application GUI, run thix command from the extracted location of the code:<br>
+To run the application GUI, run either of these commands from the root folder (ScnMsg) of the code:<br>
 *Note: command syntax may vary by OS or other settings*
 Windows:  `python .\Python\email_client.py`<br>
 Linux:   `python3 .\Python\email_client.py`<br>
