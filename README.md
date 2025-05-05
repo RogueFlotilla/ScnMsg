@@ -19,8 +19,8 @@ Use this command to install these packages before attempting to run the code:<br
 
 To run the application GUI, run thix command from the extracted location of the code:<br>
 *Note: command syntax may vary by OS or other settings*
-Windows:  `python .\Python\email_client.py`
-Linux:   `python3 .\Python\email_client.py`
+Windows:  `python .\Python\email_client.py`<br>
+Linux:   `python3 .\Python\email_client.py`<br>
 MacOS has not been tested for this project.
 
 ### Table of Libraries Used
