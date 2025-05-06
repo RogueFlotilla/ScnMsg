@@ -11,7 +11,7 @@ def load_email_settings():
   config = configparser.ConfigParser()
 
   # Read Settings File
-  config.read('settings.cfg')
+  config.read('.settings.cfg')
 
   # Access the settings
   mail_username = config.get('EmailSettings', 'email')

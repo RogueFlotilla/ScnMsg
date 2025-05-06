@@ -18,7 +18,7 @@ The ScnMsg icon was created using ChatGPT, with the prompt:
 
 AI was also used to create phishing email that was sent to see if Llama would indicate the message as likely a phishing attempt, as well as some other files that were sent from another test email to see if messages that were inteded as cybersecurity notices would be falsely marked as SPAM.
 
-| ![Wanted poster of the cat Byte McFluff](./other_content/wanted_poster.png) | 
+Finally, AI is being actively used within the code using Groq API calls in order to categorize the emails as Normal, Spam, Phishing, etc. based on the contents of the email body.
 
 ## Setup and Libraries
 1. Install Python on your system:<br>
@@ -109,6 +109,10 @@ This HTML template is the foundation for every email scan report
 | ![Screenshot of HTML code for top sections of report](./readme_images/html_top_report.png)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | This section of the HTML report template defines the structure for the top of the email analysis report. It displays the header of the report, email details such as sender, subject, and the received date, and the AI-generated analysis for the email body contents. Template placeholders can be seen here where the Jinja2 engine is creating the report by filling in variable placeholders such as {{ sender }} or {{ category_reasoning }} |
 | ![Screenshot of the HTML code block for creating variables numbers of file blocks](./readme_images/html_file_blocks.png)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | A '{ % for % } statement is used to generate separate sections for each file attachment in the email. For example, an email with one attachment will have only one block, while an email with six attachments will have six blocks, each with their cooresponding information from the analysis by Virus Total. An '{ % if % }' statement is used to dynamically generate a link to the associated Virus Total page for the file that was analyzed, or if there are no attachments an information block is created using anto let the report reader know nothing was attached. |
 | ![Screenshot of the HTML footer code and a date script](./readme_images/html_file_blocks.png)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | The footer of the report contains copyright and license details. There is also a script that contains code generating a date for the time the report was created to be used in the header. Both of these detail not only create a professional looking report, but provide important information to the reader. |
+
+![Screenshot of the Email Client with a suspected phishing email open](./readme_images/phishing_email.png)
+
+![Screenshot of the browser displaying the scan results of a phishing email](./readme_images/phishing_report.png)
 
 ## Future Improvements
 The following areas for future improvement of expansion of this software have been identified

@@ -36,8 +36,8 @@ class SettingsDialog(QDialog):
         self.saveButton.clicked.connect(self.save_settings)
 
     def load_settings(self):
-        if os.path.exists("settings.cfg"):
-            with open("settings.cfg", "r") as f:
+        if os.path.exists(".settings.cfg"):
+            with open(".settings.cfg", "r") as f:
                 lines = f.readlines()
                 if len(lines) >= 4:
                     self.emailEdit.setText(lines[1].split("email = ")[1].strip())
@@ -46,7 +46,7 @@ class SettingsDialog(QDialog):
                     self.smtpEdit.setText(lines[4].split("smtp_server = ")[1].strip())
 
     def save_settings(self):
-        with open("settings.cfg", "w") as file:
+        with open(".settings.cfg", "w") as file:
             file.write("[EmailSettings]" + "\n")
             file.write("email = " + self.emailEdit.text() + "\n")
             file.write("password = " + self.passwordEdit.text() + "\n")
@@ -217,11 +217,11 @@ class EmailClient(QMainWindow):
             ])
 
     def load_email_settings(self):
-        if not os.path.exists("settings.cfg"):
+        if not os.path.exists(".settings.cfg"):
             QMessageBox.warning(self, "Missing Settings", "Email settings file not found.")
             return None
 
-        with open("settings.cfg", "r") as f:
+        with open(".settings.cfg", "r") as f:
             lines = f.readlines()
             if len(lines) < 4:
                 QMessageBox.warning(self, "Incomplete Settings", "Settings file is incomplete.")
