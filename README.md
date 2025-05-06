@@ -11,6 +11,10 @@ The ScnMsg icon was created using ChatGPT, with the prompt:
 > This proposal is to make a simple email client using Python to detect, reduce, and hopefully prevent malware execution, scams, and phishing attempts on the technology illiterate, cyber-unaware, and especially the elderly population that can be easily manipulated. The goal is to integrate features that will check emails against existing tools and use AI to assess contents to provide a scoring mechanism to alert a user to potential risks.
 
 ## Setup and Libraries
+1. Install Python on your system:
+Windows: Navigate to https://www.python.org/downloads/ and install the latest version of Python 3 using your GUI
+Linux: `sudo apt install python3`
+
 The following modules are not standard Python3 libraries and must be installed manually before use:
 - bs4 (BeautifulSoup)
 - imap_tools
