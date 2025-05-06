@@ -1,6 +1,6 @@
 ![PNG Image of the Scan Message icon](./icons/ScnMsgIconTransparentWide.png)
 ## Introduction
-The ScnMsg email client is a simple email client created using Python and some HTML with the goal to detect, reduce, and hopefully prevent malware execution, scams, and phishing attempts on the technology illiterate, cyber-unaware, and especially the elderly population that can be easily manipulated. The goal is to integrate features that will check emails against existing tools, such as Virus Total, and use AI to assess contents to provide a scoring mechanism to alert a user to potential risks through use of Groq API calls. Complex features seen in other email clients such as automatic replies, folder sorting, and advanced filtering rules will intentionally be left out since the target users for this software would likely not be the group to leverage those features and may make its use more complicated for the anticipated user.
+The ScnMsg email client is a simple email client created using Python and some HTML with an aim to detect, reduce, and hopefully prevent malware execution, scams, and phishing attempts on the technology illiterate, cyber-unaware, and especially the elderly population that can be easily manipulated. The goal is to integrate features that will check emails against existing tools, such as Virus Total, and use AI to assess contents to provide a scoring mechanism to alert a user to potential risks through use of Groq API calls. Complex features seen in other email clients such as automatic replies, folder sorting, and advanced filtering rules will intentionally be left out since the target users for this software would likely not be the group to leverage those features and may make its use more complicated for the anticipated user.
 
 ## Explanation and Details
 Coming soon to a README near you.
@@ -23,7 +23,8 @@ Linux: `sudo apt install python3`
 - requests
 - vt (Virus Total)<br><br>
 Use this command to install these packages before attempting to run the code:<br>
-`pip install beautifulsoup4 imap-tools Jinja2 PyQt5 requests virustotal-python`
+`pip install beautifulsoup4 imap-tools Jinja2 PyQt5 requests virustotal-python`<br>
+*Note: May need to add pip to your systems PATH (environment variables).*
 
 3. To run the application GUI, run either of these commands from the root folder (ScnMsg) of the code:<br>
 Windows:  `python .\Python\email_client.py`<br>
@@ -63,6 +64,18 @@ This section displays tables containing screenshots of key secitons of code code
 
 ## Future Improvements
 The following areas for future improvement of expansion of this software have been identified
-- [ ] Implement sending of emails
+### Features Additions
+- [ ] Implement sending of emails (SMTP integration)
+- [ ] Implement deletion of emails
+- [ ] Implement "Mark as SPAM" fature, and integrate scoring into category analysis
+- [ ] Header analysis (sender obfuscation, extraction of other data to analyze: domains, IPs, etc.)
+- [ ] Link analysis (URL Scan)
+- [ ] Short link analysis (short link expansion for transparency)
+- [ ] IP analysis (WHOIS, geolocation)
+
+### Quality Enhancements
+- [ ] Refinement of AI system prompt to better detect SPAM emails
+- [ ] Refinement of AI system prompt to in include additonal categories (personal, work, etc.)
 - [ ] Cleanup code (effciency / clarity)
 - [ ] Implement robust commenting for complex code
+- [ ] Alternative scanners to VirusTotal (in liu of Private API key, faster scanning)
