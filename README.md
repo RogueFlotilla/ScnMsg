@@ -5,10 +5,16 @@ The ScnMsg email client is a simple email client created using Python and some H
 ## Explanation and Details
 Coming soon to a README near you.
 
+### Use of AI in project
 The ScnMsg icon was created using ChatGPT, with the prompt:
 > Can you make an icon for an application I'm building called ScnMsg?
 > 
 > This proposal is to make a simple email client using Python to detect, reduce, and hopefully prevent malware execution, scams, and phishing attempts on the technology illiterate, cyber-unaware, and especially the elderly population that can be easily manipulated. The goal is to integrate features that will check emails against existing tools and use AI to assess contents to provide a scoring mechanism to alert a user to potential risks.
+
+AI was also used to create phishing email that was sent to see if Llama would indicate the message as likely a phishing attempt, as well as some other files that were sent from another test email to see if messages that were inteded as cybersecurity notices would be falsely marked as SPAM.<br>
+![Wanted poster of the cat Byte McFluff](./other_content/"Whiskers Byte McFluff – Wanted Poster.png") ![Fake phishing email from Meowzon Prime concerning tuna delivery](./other_content/"📧 Phishing Email Example.docx")
+
+
 
 ## Setup and Libraries
 1. Install Python on your system:<br>
