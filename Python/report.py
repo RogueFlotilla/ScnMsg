@@ -1,6 +1,9 @@
 import jinja2
 
-def generate_report(email, category, category_reasoning, category_color, category_recommendation, attachment_results, filename):
+def generate_report(
+    email, category, category_reasoning, category_color, category_recommendation, 
+    attachment_results, filename
+  ):
   # Define data
   email_data = {
     'sender': email.from_,

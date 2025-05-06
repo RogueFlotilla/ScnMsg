@@ -59,7 +59,15 @@ Linux: `python3 .\Python\email_client.py`<br>
 ## Screenshots and Code Explanation
 This section displays tables containing screenshots of key secitons of code code with descriptions of the functionality being performed for each package (file) of the program.
 
+### Python Code that Generates HTML Report (./Python/report.py)
+This Python module is reponsible for creating the reports for each email by filling in an HTML template form.
+| Code Image *(click to enlarge)* | Description |
+|-------------------------------|-------------|
+| ![Screenshot of HTML coloring blocks](./readme_images/report_load.png)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | The top portion of the code takes the variables passed to the module, creates a dictionary of this data to be used later, and then loads the template using the Jinja2 library. |
+| ![Screenshot of HTML code for top sections of report](./readme_images/report_fill.png)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | The module then fills in the placeholders in the template from the data dictionary created earlier, ending in saving the file to a local directory to be called later by the code when trying to view the report. |
+
 ### HTML Report Template (./HTML/report.html)
+This HTML template is the foundation for every email scan report
 | Code Image *(click to enlarge)* | Description |
 |-------------------------------|-------------|
 | ![Screenshot of HTML coloring blocks](./readme_images/html_coloring.png)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Some of the class attributes are formatting blocks that define coloring for severity levels: `.negative` (no flagged alerts), `.neutral` (potentially noteworthy but not malicious), `.positive` (likely malicious), `.informational` (general awareness), and `.unknown` (ex. couldn't be processed due to error or failure). The severity levels are passed to placeholders as variables when creating the report allowing the blocks colors to be defined based on the analysis results. <br> <br> the class attribures are applied dynamically within the code to allow different coloring based on the results of the analysis, such as a file returned by Virus Total as likely being malware showing as red, or a potential spam email showing as yellow (not likely malicious, but might want to be ignored). |
