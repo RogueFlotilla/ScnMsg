@@ -3,7 +3,12 @@
 The ScnMsg email client is a simple email client created using Python and some HTML with an aim to detect, reduce, and hopefully prevent malware execution, scams, and phishing attempts on the technology illiterate, cyber-unaware, and especially the elderly population that can be easily manipulated. The goal is to integrate features that will check emails against existing tools, such as Virus Total, and use AI to assess contents to provide a scoring mechanism to alert a user to potential risks through use of Groq API calls. Complex features seen in other email clients such as automatic replies, folder sorting, and advanced filtering rules will intentionally be left out since the target users for this software would likely not be the group to leverage those features and may make its use more complicated for the anticipated user.
 
 ## Explanation and Details
-Coming soon to a README near you.
+This is a high level summary covering the order of operations for the application. Please see the **Screenshots and Code Explanation** for a lower level description of functionality:
+1. Download emails from the email provider IMAP server
+2. Scan email contents and attached files
+3. Generate a report based on the returned scan and analysis results
+4. Launch and open the GUI
+5. User interacts with the application, can view and reply to emails, and open email reports in the browser
 
 ### Use of AI in project
 The ScnMsg icon was created using ChatGPT, with the prompt:
@@ -63,7 +68,12 @@ This section displays tables containing screenshots of key secitons of code code
 This Python module is reponsible for creating, loading, and running the application in a GUI.
 | Code Image *(click to enlarge)* | Description |
 |-------------------------------|-------------|
-| ![Screenshot of HTML coloring blocks](./readme_images/analyze_categories.png)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | TBD |
+| ![Screenshot of email account settings meny code](./readme_images/client_settings.png)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | The `SettingsDialog` class is responsible for a popup window that allows a user to configure the email account settings: email, password, IMAP and SMPT servers. |
+| ![Screenshot of GUI code](./readme_images/client_gui.png)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | The `EmailClient` class first initializes the GUI for for the application. |
+| ![Screenshot of code that opens an email](./readme_images/client_open.png)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | The `open_selected_email` function opens the email for the selected row in the GUI. |
+| ![Screenshot of code that sends a reply email](./readme_images/client_send.png)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | The `open_reply_dialog` function creates a popup that allows the user to reply back to an email. This `send_reply` function button is currently simulated until SMTP functionality is integrated into this application. |
+| ![Screenshot of code that downloads and populates the emails in the inbox](./readme_images/client_send.png)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | The `download_and_update_emails` function first loads the email settings, then downloads, saves, and creates a list of the emails by calling the `get_mail` module, and finally populates the table in the GUI with the emails that can be opened. This `send_reply` function button is currently simulated until SMTP functionality is integrated into this application. The `load_email_settings` function is currently redundant, and functionality needs to be fully merged into the `get_mail` module. |
+| ![Screenshot of code that opens the email scan HTML report](./readme_images/client_send.png)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | The `open_email_report` function opens the report in the default web browser for the associated email in the selected row of the emails table. |
 
 ### Python Code that Gets Email from the IMAP Server (./Python/get_mail.py)
 This Python module is reponsible for downloading emails from the IMAP server set in the settings menu, saving each email to a pickle file, and creating a list of dictionaries that represent summary data for all emails. It has an additional function that can be called by other modules to load a single pickle file and return the needed contents from the object.

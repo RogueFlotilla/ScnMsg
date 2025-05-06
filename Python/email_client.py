@@ -188,7 +188,10 @@ class EmailClient(QMainWindow):
 
     def send_reply(self, sender, subject, reply_body, reply_dialog):
       # Simulate sending the reply
-      QMessageBox.information(self, "Reply Sent", f"Your reply to {sender} has been sent.\n\nThis functionality is currently not implemented and being simulated.")
+      QMessageBox.information(
+        self, "Reply Sent",
+        f"Your reply to {sender} has been sent.\n\nThis functionality is currently not implemented and being simulated."
+      )
       
       # Close both dialogs after sending the reply
       reply_dialog.accept()  # Close the "Reply to" dialog
