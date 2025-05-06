@@ -174,4 +174,4 @@ cython_debug/
 .pypirc
 
 # Login Settings
-settings.cfg
+./settings.cfg
