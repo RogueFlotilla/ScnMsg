@@ -110,7 +110,15 @@ This HTML template is the foundation for every email scan report
 | ![Screenshot of the HTML code block for creating variables numbers of file blocks](./readme_images/html_file_blocks.png)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | A '{ % for % } statement is used to generate separate sections for each file attachment in the email. For example, an email with one attachment will have only one block, while an email with six attachments will have six blocks, each with their cooresponding information from the analysis by Virus Total. An '{ % if % }' statement is used to dynamically generate a link to the associated Virus Total page for the file that was analyzed, or if there are no attachments an information block is created using anto let the report reader know nothing was attached. |
 | ![Screenshot of the HTML footer code and a date script](./readme_images/html_file_blocks.png)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | The footer of the report contains copyright and license details. There is also a script that contains code generating a date for the time the report was created to be used in the header. Both of these detail not only create a professional looking report, but provide important information to the reader. |
 
+### Screenshot of the ScnMsg application.
+
+![Screenshot of the ScnMsg application GUI](./readme_images/client_application.png)
+
+### Screenshot of a suspected phishing email open in the application.
+
 ![Screenshot of the Email Client with a suspected phishing email open](./readme_images/phishing_email.png)
+
+### Screenshot of the report open in the browser displaying the scan results of the phishing email.
 
 ![Screenshot of the browser displaying the scan results of a phishing email](./readme_images/phishing_report.png)
 
