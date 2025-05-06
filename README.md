@@ -13,7 +13,7 @@ The ScnMsg icon was created using ChatGPT, with the prompt:
 
 AI was also used to create phishing email that was sent to see if Llama would indicate the message as likely a phishing attempt, as well as some other files that were sent from another test email to see if messages that were inteded as cybersecurity notices would be falsely marked as SPAM.
 
-![Wanted poster of the cat Byte McFluff](./other_content/wanted_poster.png)
+| ![Wanted poster of the cat Byte McFluff](./other_content/wanted_poster.png) | 
 
 ## Setup and Libraries
 1. Install Python on your system:<br>
