@@ -22,7 +22,6 @@ Linux: `sudo apt install python3`
 - PyQt5
 - requests
 - vt (Virus Total)
-
 Use this command to install these packages before attempting to run the code:<br>
 `pip install beautifulsoup4 imap-tools Jinja2 PyQt5 requests virustotal-python`
 
