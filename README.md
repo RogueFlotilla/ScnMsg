@@ -15,7 +15,7 @@ The ScnMsg icon was created using ChatGPT, with the prompt:
 Windows: Navigate to https://www.python.org/downloads/ and install the latest version of Python 3 using your GUI<br>
 Linux: `sudo apt install python3`
 
-2. The following modules are not standard Python3 libraries and must be installed manually before use:
+2. The following are not standard Python3 libraries and must be installed manually before use:
 - bs4 (BeautifulSoup)
 - imap_tools
 - jinja2
@@ -23,10 +23,10 @@ Linux: `sudo apt install python3`
 - requests
 - vt (Virus Total)
 
-3. Use this command to install these packages before attempting to run the code:<br>
+Use this command to install these packages before attempting to run the code:<br>
 `pip install beautifulsoup4 imap-tools Jinja2 PyQt5 requests virustotal-python`
 
-**To run the application GUI, run either of these commands from the root folder (ScnMsg) of the code:**<br>
+3. To run the application GUI, run either of these commands from the root folder (ScnMsg) of the code:<br>
 Windows:  `python .\Python\email_client.py`<br>
 Linux: `python3 .\Python\email_client.py`<br>
 *Notes:  Command syntax may vary by OS or other settings. MacOS has not been tested for this project.*
